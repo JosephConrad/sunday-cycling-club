@@ -132,7 +132,7 @@ export const translations = {
             joinStrava: "Dołącz na Stravie",
         },
         hero: {
-            tagline: "Niedzielne ustawki szosowe w Warszawie",
+            tagline: "Niedzielne przejazdzki rowerowe w Warszawie",
             subtitle: "Jedziemy razem, wracamy razem.",
             cta: "Sprawdź najbliższą trasę",
             ctaStrava: "Dołącz do klubu na Strava",
@@ -232,7 +232,7 @@ export const translations = {
             since: "Jedziemy od 2023",
         },
         footer: {
-            description: "Warszawska niedzielna społeczność szosowa. Co tydzień, deszcz czy słońce.",
+            description: "Warszawska niedzielna społeczność szosowa. Co tydzień, słońce czy deszcz.",
             quickLinks: "Szybkie linki",
             home: "Start",
             routes: "Trasy",

@@ -10,14 +10,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     title: {
-        default: "Sunday Cycling Club | Niedzielne ustawki szosowe w Warszawie",
+        default: "Sunday Cycling Club | Niedzielne przejazdzki rowerowe w Warszawie",
         template: "%s | Sunday Cycling Club",
     },
     description:
-        "Sunday Cycling Club — niedzielne ustawki szosowe w Warszawie. Jedziemy razem, wracamy razem. Dołącz do niedzielnej grupy kolarskiej.",
+        "Sunday Cycling Club — niedzielne przejazdzki rowerowe w Warszawie. Jedziemy razem, wracamy razem. Dołącz do niedzielnej grupy kolarskiej.",
     keywords: [
         "kolarski klub warszawa",
-        "niedzielne ustawki szosowe",
+        "niedzielne przejazdzki rowerowe",
         "cycling club warsaw",
         "sunday ride warsaw",
         "kolarstwo szosowe warszawa",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         canonical: "/",
     },
     openGraph: {
-        title: "Sunday Cycling Club | Niedzielne ustawki szosowe w Warszawie",
+        title: "Sunday Cycling Club | Niedzielne przejazdzki rowerowe w Warszawie",
         description: "Jedziemy razem, wracamy razem. Niedzielna społeczność szosowa Warszawy.",
         type: "website",
         siteName: "Sunday Cycling Club",
@@ -56,7 +56,7 @@ export default function RootLayout({
                             name: "Sunday Cycling Club",
                             url: "https://sundaycyclingclub.pl",
                             description:
-                                "Niedzielna społeczność szosowa Warszawy. Regularne niedzielne ustawki kolarskie.",
+                                "Niedzielna społeczność szosowa Warszawy. Regularne niedzielne przejazdzki rowerowe.",
                             sport: "Cycling",
                             location: {
                                 "@type": "Place",
