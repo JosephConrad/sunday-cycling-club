@@ -129,7 +129,7 @@ export default function Home() {
             </section>
 
             {/* Rules Section */}
-            <section id="rules" className="py-20 bg-surface border-y border-border">
+            {/* <section id="rules" className="py-20 bg-surface border-y border-border">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-2xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">{t.rules.title}</h2>
@@ -147,10 +147,10 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Community Section */}
-            <section id="community" className="py-20 bg-background relative noise-overlay">
+            {/* <section id="community" className="py-20 bg-background relative noise-overlay">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-2xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">{t.community.title}</h2>
@@ -176,10 +176,10 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* About Section */}
-            <section id="about" className="py-20 bg-surface border-t border-border">
+            {/* <section id="about" className="py-20 bg-surface border-t border-border">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                         <div>
@@ -222,7 +222,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <Footer />
         </div>
