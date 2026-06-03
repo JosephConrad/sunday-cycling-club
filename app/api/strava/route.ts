@@ -8,7 +8,10 @@ import {
 
 // In-memory cache
 let cache: {
-    data: { events: StravaClubEvent[]; activities: StravaClubActivity[] };
+    data: { 
+        events: Omit<StravaClubEvent, "organizing_athlete">[]; 
+        activities: StravaClubActivity[] 
+    };
     timestamp: number;
 } | null = null;
 
