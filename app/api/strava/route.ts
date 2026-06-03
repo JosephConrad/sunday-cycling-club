@@ -46,7 +46,9 @@ export async function GET() {
             getClubActivities(clubId, 12),
         ]);
 
-        const data = { events, activities };
+        // Strip organizing_athlete for privacy
+        const sanitizedEvents = events.map(({ organizing_athlete, ...rest }) => rest);
+        const data = { events: sanitizedEvents, activities };
 
         // Update cache
         cache = {
