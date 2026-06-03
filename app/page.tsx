@@ -5,6 +5,8 @@ import { useApp } from "@/context/AppContext";
 import { translations } from "@/translations";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NextRide from "@/components/NextRide";
+import RecentRides from "@/components/RecentRides";
 
 function RuleIcon({ icon }: { icon: string }) {
     const icons: Record<string, React.ReactNode> = {
@@ -66,67 +68,10 @@ export default function Home() {
             </section>
 
             {/* Next Ride Section */}
-            <section id="routes" className="py-20 bg-background relative noise-overlay">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-2xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">{t.calendar.title}</h2>
-                        <p className="text-lg text-muted max-w-2xl mx-auto font-light">{t.calendar.subtitle}</p>
-                    </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                        {/* Route Image */}
-                        <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border">
-                            <Image src="/route-cycling.png" alt="Route" width={600} height={400} className="w-full h-64 lg:h-full object-cover" />
-                        </div>
-                        {/* Ride Details */}
-                        <div className="lg:col-span-3 bg-surface rounded-2xl border border-border p-6 md:p-8">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse-dot" />
-                                <span className="text-accent font-bold text-sm uppercase tracking-widest">{t.calendar.nextRoute}</span>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                                {[
-                                    { label: t.calendar.distance, value: t.calendar.nextDistance },
-                                    { label: t.calendar.elevation, value: t.calendar.nextElevation },
-                                    { label: t.calendar.pace, value: t.calendar.nextPace },
-                                ].map((stat) => (
-                                    <div key={stat.label} className="bg-background rounded-xl p-4 text-center border border-border">
-                                        <div className="text-2xl font-bold text-foreground">{stat.value}</div>
-                                        <div className="text-xs text-muted uppercase tracking-wider mt-1">{stat.label}</div>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="space-y-4 mb-6">
-                                {[
-                                    { icon: "📅", label: t.calendar.dateLabel, value: t.calendar.nextDate },
-                                    { icon: "⏰", label: t.calendar.timeLabel, value: t.calendar.nextTime },
-                                    { icon: "📍", label: t.calendar.locationLabel, value: t.calendar.nextLocation },
-                                ].map((item) => (
-                                    <div key={item.label} className="flex items-start gap-3">
-                                        <span className="text-lg mt-0.5">{item.icon}</span>
-                                        <div>
-                                            <div className="text-xs text-muted uppercase tracking-wider">{item.label}</div>
-                                            <div className="text-foreground font-medium">{item.value}</div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                            <p className="text-muted leading-relaxed mb-6 text-sm border-l-2 border-accent/30 pl-4 italic">{t.calendar.nextDescription}</p>
-                            <div className="flex flex-wrap gap-3">
-                                <a href="#" className="inline-flex items-center gap-2 bg-accent text-accent-contrast px-5 py-2.5 rounded-full text-sm font-bold hover:bg-accent-hover transition-all hover:scale-105">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                    {t.calendar.downloadGPX}
-                                </a>
-                                <a href="#" className="inline-flex items-center gap-2 border border-border text-foreground px-5 py-2.5 rounded-full text-sm font-bold hover:bg-surface-hover transition-all">
-                                    {t.calendar.openInKomoot}
-                                </a>
-                                <a href="https://maps.google.com/?q=PKiN+Warszawa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-border text-foreground px-5 py-2.5 rounded-full text-sm font-bold hover:bg-surface-hover transition-all">
-                                    📍 {t.calendar.viewOnMap}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <NextRide />
+
+            {/* Recent Rides from Strava */}
+            <RecentRides />
 
             {/* Rules Section */}
             {/* <section id="rules" className="py-20 bg-surface border-y border-border">

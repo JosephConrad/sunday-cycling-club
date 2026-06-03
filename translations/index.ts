@@ -108,6 +108,15 @@ export const translations = {
             founderName: "Konrad & Friends",
             since: "Riding since 2023",
         },
+        recentRides: {
+            title: "Recent Rides",
+            subtitle: "See what our club members have been riding lately",
+            distance: "Dist",
+            elevation: "Elev",
+            speed: "Avg",
+            duration: "Time",
+            joinCta: "Join us on Strava",
+        },
         footer: {
             description: "Warsaw's Sunday road cycling community. Every week, rain or shine.",
             quickLinks: "Quick Links",
@@ -230,6 +239,15 @@ export const translations = {
             founderRole: "Założyciel",
             founderName: "Konrad & Przyjaciele",
             since: "Jedziemy od 2023",
+        },
+        recentRides: {
+            title: "Ostatnie Przejażdżki",
+            subtitle: "Zobacz, co ostatnio kręcili członkowie naszego klubu",
+            distance: "Dyst",
+            elevation: "Przew",
+            speed: "Śr.",
+            duration: "Czas",
+            joinCta: "Dołącz do nas na Stravie",
         },
         footer: {
             description: "Warszawska niedzielna społeczność szosowa. Co tydzień, słońce czy deszcz.",
