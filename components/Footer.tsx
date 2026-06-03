@@ -9,7 +9,7 @@ export default function Footer() {
     const t = translations[language].footer;
 
     return (
-        <footer className="bg-[#080a10] py-16 border-t border-border">
+        <footer className="bg-background py-16 border-t border-border">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
@@ -24,33 +24,33 @@ export default function Footer() {
                                 </svg>
                             </div>
                             <div>
-                                <span className="text-white font-bold text-sm tracking-[0.15em] uppercase">Sunday</span>
+                                <span className="text-foreground font-bold text-sm tracking-[0.15em] uppercase">Sunday</span>
                                 <span className="text-accent font-bold text-sm tracking-[0.15em] uppercase ml-1">Cycling Club</span>
                             </div>
                         </div>
-                        <p className="text-gray-400 max-w-sm leading-relaxed text-sm">
+                        <p className="text-muted max-w-sm leading-relaxed text-sm">
                             {t.description}
                         </p>
                     </div>
 
                     {/* Links */}
                     <div>
-                        <h4 className="text-white font-semibold mb-4 text-sm">{t.quickLinks}</h4>
+                        <h4 className="text-foreground font-semibold mb-4 text-sm">{t.quickLinks}</h4>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.home}</Link></li>
-                            <li><Link href="#routes" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.routes}</Link></li>
-                            <li><Link href="#rules" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.rules}</Link></li>
-                            <li><Link href="#community" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.community}</Link></li>
-                            <li><Link href="#about" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.about}</Link></li>
+                            <li><Link href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.home}</Link></li>
+                            <li><Link href="#routes" className="text-muted hover:text-accent transition-colors text-sm">{t.routes}</Link></li>
+                            <li><Link href="#rules" className="text-muted hover:text-accent transition-colors text-sm">{t.rules}</Link></li>
+                            <li><Link href="#community" className="text-muted hover:text-accent transition-colors text-sm">{t.community}</Link></li>
+                            <li><Link href="#about" className="text-muted hover:text-accent transition-colors text-sm">{t.about}</Link></li>
                         </ul>
                     </div>
 
                     {/* Legal */}
                     <div>
-                        <h4 className="text-white font-semibold mb-4 text-sm">{t.legal}</h4>
+                        <h4 className="text-foreground font-semibold mb-4 text-sm">{t.legal}</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/privacy" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.privacyPolicy}</Link></li>
-                            <li><Link href="/terms" className="text-gray-400 hover:text-accent transition-colors text-sm">{t.termsOfService}</Link></li>
+                            <li><Link href="/privacy" className="text-muted hover:text-accent transition-colors text-sm">{t.privacyPolicy}</Link></li>
+                            <li><Link href="/terms" className="text-muted hover:text-accent transition-colors text-sm">{t.termsOfService}</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                 <div className="flex justify-center gap-4 mb-8">
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-white transition-colors border border-white/10 rounded-full text-xs font-semibold uppercase tracking-widest bg-white/5 hover:bg-white/10"
+                        className="flex items-center gap-2 px-4 py-2 text-muted hover:text-foreground transition-colors border border-border rounded-full text-xs font-semibold uppercase tracking-widest bg-surface hover:bg-surface-hover"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -68,7 +68,7 @@ export default function Footer() {
                     </button>
                     <button
                         onClick={toggleTheme}
-                        className="flex items-center gap-2 px-4 py-2 text-gray-400 hover:text-white transition-colors border border-white/10 rounded-full text-xs font-semibold uppercase tracking-widest bg-white/5 hover:bg-white/10"
+                        className="flex items-center gap-2 px-4 py-2 text-muted hover:text-foreground transition-colors border border-border rounded-full text-xs font-semibold uppercase tracking-widest bg-surface hover:bg-surface-hover"
                     >
                         {theme === "dark" ? (
                             <>
@@ -89,22 +89,22 @@ export default function Footer() {
                 </div>
 
                 {/* Social & Copyright */}
-                <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10">
+                <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border">
                     <div className="flex items-center space-x-6 mb-4 md:mb-0">
                         {/* Strava */}
-                        <a href="https://www.strava.com/clubs/sunday-cycling-club" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                        <a href="https://www.strava.com/clubs/sunday-cycling-club" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors">
                             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/>
                             </svg>
                         </a>
                         {/* Instagram */}
-                        <a href="https://instagram.com/sundaycyclingclub" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                        <a href="https://instagram.com/sundaycyclingclub" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
                     </div>
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-muted text-sm">
                         {t.madeWith} © {new Date().getFullYear()} Sunday Cycling Club
                     </p>
                 </div>

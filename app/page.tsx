@@ -50,7 +50,7 @@ export default function Home() {
                         {t.hero.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#routes" className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-hover transition-all duration-300 text-lg shadow-xl hover:scale-105 accent-glow">
+                        <a href="#routes" className="bg-accent text-accent-contrast px-8 py-4 rounded-full font-semibold hover:bg-accent-hover transition-all duration-300 text-lg shadow-xl hover:scale-105 accent-glow">
                             {t.hero.cta}
                         </a>
                         <a href="https://www.strava.com/clubs/sunday-cycling-club" target="_blank" rel="noopener noreferrer" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-lg">
@@ -112,7 +112,7 @@ export default function Home() {
                             </div>
                             <p className="text-muted leading-relaxed mb-6 text-sm border-l-2 border-accent/30 pl-4 italic">{t.calendar.nextDescription}</p>
                             <div className="flex flex-wrap gap-3">
-                                <a href="#" className="inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-accent-hover transition-all hover:scale-105">
+                                <a href="#" className="inline-flex items-center gap-2 bg-accent text-accent-contrast px-5 py-2.5 rounded-full text-sm font-bold hover:bg-accent-hover transition-all hover:scale-105">
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                                     {t.calendar.downloadGPX}
                                 </a>
@@ -214,7 +214,7 @@ export default function Home() {
                                         <label className="block text-xs text-muted uppercase tracking-wider mb-1.5">{t.about.messagePlaceholder}</label>
                                         <textarea rows={4} className="w-full bg-surface border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent/50 transition-colors text-sm resize-none" />
                                     </div>
-                                    <button type="submit" className="w-full bg-accent text-white py-3 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-accent-hover transition-all hover:scale-[1.02] accent-glow">
+                                    <button type="submit" className="w-full bg-accent text-accent-contrast py-3 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-accent-hover transition-all hover:scale-[1.02] accent-glow">
                                         {t.about.sendButton}
                                     </button>
                                 </form>
