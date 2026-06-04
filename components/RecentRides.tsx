@@ -62,7 +62,7 @@ function getGradient(name: string): string {
 
 function ActivitySkeleton() {
     return (
-        <div className="bg-surface rounded-2xl border border-border p-5 animate-pulse">
+        <div className="w-[85vw] sm:w-[300px] md:w-auto shrink-0 snap-center bg-surface rounded-2xl border border-border p-5 animate-pulse">
             <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-border" />
                 <div className="flex-1">
@@ -70,8 +70,7 @@ function ActivitySkeleton() {
                     <div className="h-3 bg-border rounded w-32" />
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-3">
-                <div className="h-12 bg-border rounded-xl" />
+            <div className="grid grid-cols-2 gap-3">
                 <div className="h-12 bg-border rounded-xl" />
                 <div className="h-12 bg-border rounded-xl" />
             </div>
@@ -138,7 +137,7 @@ export default function RecentRides() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
                     {loading
                         ? Array.from({ length: 6 }).map((_, i) => <ActivitySkeleton key={i} />)
                         : activities.slice(0, 9).map((activity, idx) => {
@@ -148,7 +147,7 @@ export default function RecentRides() {
                               return (
                                   <div
                                       key={idx}
-                                      className="group bg-background rounded-2xl border border-border p-5 hover:border-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5"
+                                      className="w-[85vw] sm:w-[300px] md:w-auto shrink-0 snap-center group bg-background rounded-2xl border border-border p-5 hover:border-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5"
                                   >
                                       {/* Athlete & Ride Name */}
                                       <div className="flex items-center gap-3 mb-4">
@@ -166,21 +165,13 @@ export default function RecentRides() {
                                       </div>
 
                                       {/* Stats */}
-                                      <div className="grid grid-cols-3 gap-2">
+                                      <div className="grid grid-cols-2 gap-2">
                                           <div className="bg-surface rounded-xl p-2.5 text-center border border-border/50">
                                               <div className="text-foreground font-bold text-sm">
                                                   {formatDistance(activity.distance)}
                                               </div>
                                               <div className="text-muted text-[10px] uppercase tracking-wider mt-0.5">
                                                   {t.recentRides.distance}
-                                              </div>
-                                          </div>
-                                          <div className="bg-surface rounded-xl p-2.5 text-center border border-border/50">
-                                              <div className="text-foreground font-bold text-sm">
-                                                  {formatElevation(activity.total_elevation_gain)}
-                                              </div>
-                                              <div className="text-muted text-[10px] uppercase tracking-wider mt-0.5">
-                                                  {t.recentRides.elevation}
                                               </div>
                                           </div>
                                           <div className="bg-surface rounded-xl p-2.5 text-center border border-border/50">
