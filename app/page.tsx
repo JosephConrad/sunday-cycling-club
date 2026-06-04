@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NextRide from "@/components/NextRide";
 import RecentRides from "@/components/RecentRides";
+import HeroBadge from "@/components/HeroBadge";
 
 function RuleIcon({ icon }: { icon: string }) {
     const icons: Record<string, React.ReactNode> = {
@@ -39,12 +40,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
                 </div>
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-8">
-                        <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse-dot" />
-                        <span className="text-white/80 text-xs font-medium uppercase tracking-widest">
-                            {language === "pl" ? "Każda niedziela, 7:30" : "Every Sunday, 7:30 AM"}
-                        </span>
-                    </div>
+                    <HeroBadge />
                     <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight max-w-4xl leading-tight">
                         {t.hero.tagline}
                     </h1>

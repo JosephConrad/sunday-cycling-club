@@ -100,7 +100,7 @@ export async function exchangeCodeForTokens(code: string): Promise<StravaTokenRe
 }
 
 export interface StravaClubEvent {
-    id: number;
+    id: string | number;
     title: string;
     description: string;
     club_id: number;
@@ -113,7 +113,7 @@ export interface StravaClubEvent {
         lastname: string;
     };
     activity_type: string;
-    route_id: number | null;
+    route_id: string | number | null;
     women_only: boolean;
     private: boolean;
     upcoming_occurrences: string[]; // ISO date strings
@@ -170,5 +170,8 @@ export async function getClubEvents(
         throw new Error(`Failed to fetch club events: ${response.status} ${error}`);
     }
 
-    return response.json();
+    const text = await response.text();
+    // Wrap large integer IDs (like event.id and route_id) in strings before parsing to prevent precision loss
+    const safeText = text.replace(/"(id|route_id)":\s*(\d+)/g, '"$1": "$2"');
+    return JSON.parse(safeText);
 }

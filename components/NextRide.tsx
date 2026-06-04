@@ -6,7 +6,7 @@ import { useApp } from "@/context/AppContext";
 import { translations } from "@/translations";
 
 interface StravaClubEvent {
-    id: number;
+    id: string | number;
     title: string;
     description: string;
     club_id: number;
