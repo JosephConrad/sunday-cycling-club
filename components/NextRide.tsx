@@ -147,7 +147,7 @@ export default function NextRide() {
                     {/* Route Image */}
                     <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border relative min-h-[250px]">
                         <Image 
-                            src="/route-cycling.png" 
+                            src="/next-ride.jpg" 
                             alt="Route" 
                             fill
                             className="object-cover" 
