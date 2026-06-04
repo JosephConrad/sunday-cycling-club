@@ -20,11 +20,11 @@ export const metadata: Metadata = {
         "niedzielne przejazdzki rowerowe",
         "cycling club warsaw",
         "sunday ride warsaw",
-        "kolarstwo szosowe warszawa",
+        "kolarstwo warszawa",
         "grupa kolarska",
         "road cycling poland",
         "kampinos cycling",
-        "szosa warszawa",
+        "rower warszawa",
     ],
     metadataBase: new URL("https://sundaycyclingclub.pl"),
     alternates: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Sunday Cycling Club | Niedzielne przejazdzki rowerowe w Warszawie",
-        description: "Jedziemy razem, wracamy razem. Niedzielna społeczność szosowa Warszawy.",
+        description: "Jedziemy razem, wracamy razem. Niedzielna społeczność rowerowa Warszawy.",
         type: "website",
         siteName: "Sunday Cycling Club",
         url: "https://sundaycyclingclub.pl",
@@ -56,7 +56,7 @@ export default function RootLayout({
                             name: "Sunday Cycling Club",
                             url: "https://sundaycyclingclub.pl",
                             description:
-                                "Niedzielna społeczność szosowa Warszawy. Regularne niedzielne przejazdzki rowerowe.",
+                                "Niedzielna społeczność rowerowa Warszawy. Regularne niedzielne przejazdzki rowerowe.",
                             sport: "Cycling",
                             location: {
                                 "@type": "Place",

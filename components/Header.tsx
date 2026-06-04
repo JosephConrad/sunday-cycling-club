@@ -9,7 +9,17 @@ export default function Header() {
     const { language, toggleLanguage, theme, toggleTheme } = useApp();
     const t = translations[language].header;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuAnimating, setIsMenuAnimating] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            setIsMenuAnimating(true);
+        } else {
+            const timer = setTimeout(() => setIsMenuAnimating(false), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [isMenuOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,10 +54,12 @@ export default function Header() {
         }
     };
 
+    const showSolidBg = isMenuOpen || isMenuAnimating;
+
     return (
         <nav
-            className={`fixed top-0 w-full z-50 ${!isMenuOpen ? "transition-all duration-300" : ""} ${
-                isMenuOpen
+            className={`fixed top-0 w-full z-50 ${!showSolidBg ? "transition-all duration-300" : ""} ${
+                showSolidBg
                     ? "bg-background border-b border-border"
                     : scrolled
                     ? "bg-surface/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/5"

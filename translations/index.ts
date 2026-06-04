@@ -229,7 +229,7 @@ export const translations = {
         about: {
             title: "O Nas",
             subtitle: "Sunday Cycling Club zaczął się od kilku znajomych, którzy chcieli, żeby niedzielne poranki miały sens.",
-            story: "To, co zaczęło się od luźnego spotkania o 6 rano pod Pałacem Kultury, urosło do najbardziej regularnej niedzielnej grupy szosowej w Warszawie. Nie jesteśmy teamem wyścigowym — jesteśmy społecznością. Prawnicy jadą obok studentów, programiści obok designerów. Jedyne, co nas łączy, to to, że w niedzielny poranek wolimy być na dwóch kółkach niż w łóżku.",
+            story: "To, co zaczęło się od luźnego spotkania o 6 rano pod Pałacem Kultury, urosło do najbardziej regularnej niedzielnej grupy rowerowej w Warszawie. Nie jesteśmy teamem wyścigowym — jesteśmy społecznością. Prawnicy jadą obok studentów, programiści obok designerów. Jedyne, co nas łączy, to to, że w niedzielny poranek wolimy być na dwóch kółkach niż w łóżku.",
             contactTitle: "Kontakt",
             contactDescription: "Pytania przed pierwszą jazdą? Chcesz współpracować? Napisz do nas.",
             emailLabel: "Email",
@@ -250,7 +250,7 @@ export const translations = {
             joinCta: "Dołącz do nas na Stravie",
         },
         footer: {
-            description: "Warszawska niedzielna społeczność szosowa. Co tydzień, słońce czy deszcz.",
+            description: "Warszawska niedzielna społeczność rowerowa. Co tydzień, słońce czy deszcz.",
             quickLinks: "Szybkie linki",
             home: "Start",
             routes: "Trasy",
