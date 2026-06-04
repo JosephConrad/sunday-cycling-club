@@ -26,7 +26,9 @@ export default function Header() {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-                scrolled || isMenuOpen
+                isMenuOpen
+                    ? "bg-background border-b border-border"
+                    : scrolled
                     ? "bg-surface/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/5"
                     : "bg-transparent border-b border-transparent"
             }`}
