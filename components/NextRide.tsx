@@ -98,6 +98,7 @@ export default function NextRide() {
             year: "numeric",
             month: "long",
             day: "numeric",
+            timeZone: "Europe/Warsaw",
         });
         displayDate = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 
@@ -106,6 +107,7 @@ export default function NextRide() {
             hour: "2-digit",
             minute: "2-digit",
             hour12: language === "en",
+            timeZone: "Europe/Warsaw",
         });
     }
 
