@@ -23,9 +23,30 @@ export default function Header() {
         document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     }, [isMenuOpen]);
 
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            setIsMenuOpen(false);
+            // Small timeout to allow the body overflow:hidden to be cleared by the useEffect
+            setTimeout(() => {
+                const element = document.getElementById(href.substring(1));
+                if (element) {
+                    const navbarHeight = document.getElementById("navbar")?.offsetHeight || 0;
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                        top: elementPosition - navbarHeight,
+                        behavior: "smooth"
+                    });
+                }
+            }, 100);
+        } else {
+            setIsMenuOpen(false);
+        }
+    };
+
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+            className={`fixed top-0 w-full z-50 ${!isMenuOpen ? "transition-all duration-300" : ""} ${
                 isMenuOpen
                     ? "bg-background border-b border-border"
                     : scrolled
@@ -63,7 +84,11 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <Link href="#routes" className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors">
+                        <Link 
+                            href="#routes" 
+                            className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors"
+                            onClick={(e) => handleNavClick(e, "#routes")}
+                        >
                             {t.routes}
                         </Link>
                     </div>
@@ -145,7 +170,7 @@ export default function Header() {
                                 key={item.href}
                                 href={item.href}
                                 className="block text-2xl font-light text-foreground tracking-tight hover:text-accent transition-colors"
-                                onClick={() => setIsMenuOpen(false)}
+                                onClick={(e) => handleNavClick(e, item.href)}
                             >
                                 {item.label}
                             </Link>
