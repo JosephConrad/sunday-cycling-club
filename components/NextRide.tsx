@@ -113,14 +113,32 @@ export default function NextRide() {
     const description = event?.description || t.calendar.nextDescription;
     const location = event?.address || t.calendar.nextLocation;
     
-    // Stats calculation (with fallbacks if no route attached to Strava event)
-    const distance = event?.route 
-        ? `${Math.round(event.route.distance / 1000)} km`
+    // Stats calculation (only display distance/elevation if route is attached)
+    const distance = hasStravaEvent
+        ? (event?.route ? `${Math.round(event.route.distance / 1000)} km` : null)
         : t.calendar.nextDistance;
-    const elevation = event?.route
-        ? `${Math.round(event.route.elevation_gain)} m`
+
+    const elevation = hasStravaEvent
+        ? (event?.route ? `${Math.round(event.route.elevation_gain)} m` : null)
         : t.calendar.nextElevation;
-    const pace = t.calendar.nextPace; // pace is not stored on Strava event routes, keep fallback
+
+    const pace = "10–15 km/h";
+
+    // Build the stats array dynamically
+    const stats = [];
+    if (distance) {
+        stats.push({ label: t.calendar.distance, value: distance });
+    }
+    if (elevation) {
+        stats.push({ label: t.calendar.elevation, value: elevation });
+    }
+    stats.push({ label: t.calendar.pace, value: pace });
+
+    const gridColsClass = stats.length === 3 
+        ? "grid-cols-1 sm:grid-cols-3" 
+        : stats.length === 2 
+            ? "grid-cols-1 sm:grid-cols-2" 
+            : "grid-cols-1";
 
     // Maps link
     const mapUrl = event?.start_latlng 
@@ -161,12 +179,8 @@ export default function NextRide() {
                                 {title}
                             </span>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                            {[
-                                { label: t.calendar.distance, value: distance },
-                                { label: t.calendar.elevation, value: elevation },
-                                { label: t.calendar.pace, value: pace },
-                            ].map((stat) => (
+                        <div className={`grid ${gridColsClass} gap-4 mb-6`}>
+                            {stats.map((stat) => (
                                 <div key={stat.label} className="bg-background rounded-xl p-4 text-center border border-border">
                                     <div className="text-2xl font-bold text-foreground">{stat.value}</div>
                                     <div className="text-xs text-muted uppercase tracking-wider mt-1">{stat.label}</div>
