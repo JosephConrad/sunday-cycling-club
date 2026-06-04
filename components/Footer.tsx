@@ -49,8 +49,8 @@ export default function Footer() {
                     <div>
                         <h4 className="text-foreground font-semibold mb-4 text-sm">{t.legal}</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/privacy" className="text-muted hover:text-accent transition-colors text-sm">{t.privacyPolicy}</Link></li>
-                            <li><Link href="/terms" className="text-muted hover:text-accent transition-colors text-sm">{t.termsOfService}</Link></li>
+                            <li><a href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.privacyPolicy}</a></li>
+                            <li><a href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.termsOfService}</a></li>
                         </ul>
                     </div>
                 </div>

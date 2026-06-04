@@ -51,7 +51,7 @@ export default function Home() {
                         <a href="#routes" className="bg-accent text-accent-contrast px-8 py-4 rounded-full font-semibold hover:bg-accent-hover transition-all duration-300 text-lg shadow-xl hover:scale-105 accent-glow">
                             {t.hero.cta}
                         </a>
-                        <a href="https://strava.app.link/2vLbqhCTF3b" target="_blank" rel="noopener noreferrer" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-lg">
+                        <a href="https://strava.app.link/2vLbqhCTF3b" target="_blank" rel="noopener noreferrer" className="bg-[#FC4C02] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#e04400] transition-all duration-300 text-lg shadow-xl hover:scale-105">
                             {t.hero.ctaStrava}
                         </a>
                     </div>
