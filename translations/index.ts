@@ -147,7 +147,7 @@ export const translations = {
             ctaStrava: "Dołącz do klubu na Strava",
         },
         calendar: {
-            title: "Najbliższa Ustawka",
+            title: "Najbliższa Przejażdżka",
             subtitle: "Zaplanuj swoją niedzielę — wszystkie szczegóły w jednym miejscu",
             dateLabel: "Data",
             timeLabel: "Godzina zbiórki",
@@ -198,7 +198,7 @@ export const translations = {
                 {
                     icon: "weather",
                     title: "Pogoda decyduje",
-                    description: "Jeśli warunki są niebezpieczne (ulewa, lód, burze), odwołujemy ustawkę. Sprawdź grupę na WhatsApp w sobotę wieczorem.",
+                    description: "Jeśli warunki są niebezpieczne (ulewa, lód, burze), odwołujemy przejażdżkę. Sprawdź grupę na WhatsApp w sobotę wieczorem.",
                 },
                 {
                     icon: "respect",
@@ -217,12 +217,12 @@ export const translations = {
             },
             instagram: {
                 title: "Instagram",
-                description: "Zdjęcia z trasy, nowe stroje, kulisy naszych ustawek. Vibe klubu, uchwycony.",
+                description: "Zdjęcia z trasy, nowe stroje, kulisy naszych przejażdżek. Vibe klubu, uchwycony.",
                 cta: "Obserwuj nas",
             },
             whatsapp: {
                 title: "Grupa WhatsApp",
-                description: "Spontaniczne jazdy w tygodniu, update pogody, dyskusje o trasach i potwierdzenia niedzielnych ustawek. Centrum dowodzenia w czasie rzeczywistym.",
+                description: "Spontaniczne jazdy w tygodniu, update pogody, dyskusje o trasach i potwierdzenia niedzielnych przejażdżek. Centrum dowodzenia w czasie rzeczywistym.",
                 cta: "Dołącz do chatu",
             },
         },
