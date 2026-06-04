@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <footer className="bg-background py-16 border-t border-border">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
@@ -42,15 +42,6 @@ export default function Footer() {
                             <li><Link href="#rules" className="text-muted hover:text-accent transition-colors text-sm">{t.rules}</Link></li>
                             <li><Link href="#community" className="text-muted hover:text-accent transition-colors text-sm">{t.community}</Link></li>
                             <li><Link href="#about" className="text-muted hover:text-accent transition-colors text-sm">{t.about}</Link></li>
-                        </ul>
-                    </div>
-
-                    {/* Legal */}
-                    <div>
-                        <h4 className="text-foreground font-semibold mb-4 text-sm">{t.legal}</h4>
-                        <ul className="space-y-3">
-                            <li><a href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.privacyPolicy}</a></li>
-                            <li><a href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.termsOfService}</a></li>
                         </ul>
                     </div>
                 </div>
