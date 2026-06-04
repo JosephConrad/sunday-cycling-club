@@ -39,9 +39,6 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li><Link href="#" className="text-muted hover:text-accent transition-colors text-sm">{t.home}</Link></li>
                             <li><Link href="#routes" className="text-muted hover:text-accent transition-colors text-sm">{t.routes}</Link></li>
-                            <li><Link href="#rules" className="text-muted hover:text-accent transition-colors text-sm">{t.rules}</Link></li>
-                            <li><Link href="#community" className="text-muted hover:text-accent transition-colors text-sm">{t.community}</Link></li>
-                            <li><Link href="#about" className="text-muted hover:text-accent transition-colors text-sm">{t.about}</Link></li>
                         </ul>
                     </div>
                 </div>

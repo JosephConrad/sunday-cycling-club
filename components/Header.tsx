@@ -64,15 +64,6 @@ export default function Header() {
                         <Link href="#routes" className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors">
                             {t.routes}
                         </Link>
-                        <Link href="#rules" className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors">
-                            {t.rules}
-                        </Link>
-                        <Link href="#community" className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors">
-                            {t.community}
-                        </Link>
-                        <Link href="#about" className="text-muted hover:text-foreground text-xs font-bold uppercase tracking-widest transition-colors">
-                            {t.about}
-                        </Link>
                     </div>
 
                     {/* Right side controls */}
@@ -147,9 +138,6 @@ export default function Header() {
                     <div className="space-y-6 mt-4">
                         {[
                             { href: "#routes", label: t.routes },
-                            { href: "#rules", label: t.rules },
-                            { href: "#community", label: t.community },
-                            { href: "#about", label: t.about },
                         ].map((item) => (
                             <Link
                                 key={item.href}
