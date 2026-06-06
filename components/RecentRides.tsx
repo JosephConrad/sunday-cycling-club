@@ -141,8 +141,11 @@ export default function RecentRides() {
                     {loading
                         ? Array.from({ length: 6 }).map((_, i) => <ActivitySkeleton key={i} />)
                         : activities.slice(0, 9).map((activity, idx) => {
+                              const firstInit = activity.athlete.firstname ? activity.athlete.firstname[0].toUpperCase() : "";
+                              const lastInit = activity.athlete.lastname ? activity.athlete.lastname[0].toUpperCase() : "";
+                              const initials = `${firstInit}${lastInit}`;
+                              const displayInitials = firstInit && lastInit ? `${firstInit}. ${lastInit}.` : firstInit || lastInit || "—";
                               const gradient = getGradient(activity.athlete.firstname + activity.athlete.lastname);
-                              const initials = `${activity.athlete.firstname[0]}${activity.athlete.lastname[0]}`;
 
                               return (
                                   <div
@@ -158,7 +161,7 @@ export default function RecentRides() {
                                           </div>
                                           <div className="min-w-0">
                                               <div className="text-foreground font-semibold text-sm truncate">
-                                                  {activity.athlete.firstname} {activity.athlete.lastname}
+                                                  {displayInitials}
                                               </div>
                                               <div className="text-muted text-xs truncate">{activity.name}</div>
                                           </div>

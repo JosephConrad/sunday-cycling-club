@@ -67,7 +67,7 @@ export default function Home() {
             <NextRide />
 
             {/* Recent Rides from Strava */}
-            <RecentRides />
+            {/* <RecentRides /> */}
 
             {/* Rules Section */}
             {/* <section id="rules" className="py-20 bg-surface border-y border-border">
